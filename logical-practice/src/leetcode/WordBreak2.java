@@ -1,4 +1,4 @@
-package logical;
+package leetcode;
 
 import java.util.ArrayList;
 import java.util.Arrays;

@@ -1,4 +1,4 @@
-package logical;
+package leetcode;
 
 import ds.Node;
 
