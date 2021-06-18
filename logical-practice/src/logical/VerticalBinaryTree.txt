@@ -1,0 +1,122 @@
+You are given a binary tree for which you have to print its vertical order traversal. your task is to complete the function verticalOrder which takes one argument the root of the binary tree and prints the node of the binary tree in vertical order as shown below.
+If there are multiple nodes passing through a vertical line, then they should printed as they appear in level order traversal.
+
+Input Format:
+The first line of input contains T denoting the number of testcases. T testcases follow. Each testcase contains 2 lines of input. The first line contains number of operations to insert the nodes. The second line contains the nodes and their position during the insertion.
+
+Output Format:
+For each testcase, the vertical order traversal of the tree is to be printed. The nodes' data are to be separated by spaces.
+
+Your Task:
+This is a function problem. Your task is to just complete the verticalOrder() function and you don't have to take any input or output. The newline is automatically appended by the driver code.
+
+Constraints:
+1 <= T <= 100
+1 <= Number of nodes <= 5000
+
+Example:
+Input:
+4
+3
+1 2 L 1 3 R 3 5 L
+2
+1 2 R 1 3 L
+4
+10 20 L 10 30 R 20 40 L 20 60 R
+4
+1 2 L 1 3 R 2 4 R 4 5 R
+
+Output:
+2 1 5 3
+3 1 2
+40 20 10 60 30
+2 1 4 3 5
+
+Explanation:
+Testcase1:
+         1
+       /     \
+    2         3
+              /
+         5
+As it is evident from the above diagram that during vertical traversal 2 will come first, then 1 and  5, and then 3. So output is 2 1 5 3
+Testcase2:
+         1
+       /     \
+     3       2
+As it is evident from the above diagram that during vertical traversal 3 will come first, then 1 and then 2. So output is 3 1 2
+
+
+
+
+					 11
+				/          \
+			9 					10
+		  /   \           	  /    \
+		5		6			7 		8
+	  /    \      \           	  /	   \
+	1 		2		3 			4		12
+  /    \      \       \       /           \
+13		14		15		16	17				18   
+										12		13
+													21
+
+1
+10
+11 9 L 11 10 R 9 5 L 9 6 R 5 1 L 5 2 R 6 3 R 10 7 L 10 8 R 8 4 L
+1,5,9,2,11,6,7,10,3,4,8
+1,5,9,2,11,6,7,10,3,4,8,
+
+1
+21
+
+11 9 L 9 5 L 5 1 L 1 13 L 1 14 R 5 2 R 2 15 R 9 6 R 6 3 R 3 16 R 11 10 R 10 8 R 8 12 R 12 18 R 8 4 L 4 17 L 10 7 L 18 12 L 18 13 R  
+13,1,5,14,9,2,11,6,7,15,17,10,3,4,8,16,12,12,18,13
+13,1,5,14,9,2,11,6,7,15,17,10,3,4,8,16,12,12,18,13,
+
+
+11 9 L 9 5 L 5 1 L 1 13 L 13 21 R 1 14 R 5 2 R 2 15 R 9 6 R 6 3 R 3 16 R 11 10 R 10 8 R 8 12 R 12 18 R 8 4 L 4 17 L 10 7 L 18 12 L 18 13 R 13 21 R
+13 1 21 5 14 9 2 11 6 7 15 17 10 3 4 8 16 12 12 18 13 21 
+13 1 21 5 14 9 2 11 6 7 15 17 10 3 4 8 16 12 12 18 13 21
+
+#0,0,11
+#-1,1,9
+#-2,2,5
+#-3,3,1
+#-4,4,13
+#-2,4,14
+#-1,3,2
+#0,4,15
+#0,2,6
+#1,3,3
+#2,4,16
+#1,1,10
+#2,2,8
+#3,3,12
+#4,4,18
+#1,3,4
+#0,4,17
+#0,2,7
+5,5,13
+3,5,12
+
+-4,4,13
+-3,3,1
+-2,2,5
+-2,4,14
+-1,1,9
+-1,3,2
+0,0,11
+0,2,6
+0,2,7
+0,4,15
+0,4,17
+1,1,10
+1,3,3
+1,3,4
+2,2,8
+2,4,16
+3,3,12 ------- 3,5,12
+4,4,18
+-----------
+5,5,13
