@@ -80,8 +80,11 @@ public class Test {
 		
 	}
 	
-	void printMatrix(int[][] matrix, int rowLen, int colLen){
+	void printMatrix(int[][] matrix){
         
+		int rowLen=matrix.length;
+		int colLen=matrix[0].length;
+		
         for(int row=0; row<rowLen; row++){
             for(int col=0; col<colLen; col++){
                 System.out.print(matrix[row][col]+" ");
